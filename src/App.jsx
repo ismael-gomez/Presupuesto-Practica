@@ -32,6 +32,7 @@ const App = () => {
   useEffect(e=>{
     // localStorage.setItem('gastos', JSON.stringify(gastos));
     localStorage.setItem('presupuesto', JSON.stringify(presupuesto))
+    setIsValido(false);
     
   },[presupuesto])
  
