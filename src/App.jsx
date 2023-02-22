@@ -18,22 +18,13 @@ const App = () => {
     const optenerLS = () =>{
       const pacienteLS =  JSON.parse(localStorage.getItem('gastos')) ?? []
       setGasto(pacienteLS)
-      const presupuestoLS = JSON.parse(localStorage.getItem('presupuesto')) ?? 0;
-      setPresupuesto(presupuestoLS);
     }
     optenerLS();
   },[])
   useEffect(e=>{
     localStorage.setItem('gastos', JSON.stringify(gastos));
     // localStorage.setItem('presupuesto', JSON.stringify(presupuesto))
-
   },[gastos])
-
-  useEffect(e=>{
-    // localStorage.setItem('gastos', JSON.stringify(gastos));
-    localStorage.setItem('presupuesto', JSON.stringify(presupuesto))
-    
-  },[presupuesto])
  
   const handleMas = e => {
     setVerModal(true)
